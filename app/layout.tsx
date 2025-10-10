@@ -10,8 +10,8 @@ import { Suspense } from "react"
 import { MobileDock } from "@/components/mobile-dock"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "RajMS",
+  description: "Portfolio",
   generator: "v0.app",
 }
 
