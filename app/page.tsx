@@ -62,27 +62,38 @@ export default function HomePage() {
             const featuredProjects = [
               {
                 title: "Hex Colour Game",
-                description: "Guess the hex code of the colour based on the given colour",
+                description:
+                  "Guess the hex code of the colour based on the given colour",
                 liveUrl: "https://hexa-color-guessing-game.vercel.app",
-                sourceUrl: "https://github.com/RajManish8340/hexa-color-guessing",
-                tags: ["nextjs", "shadcn", "Ts"]
+                sourceUrl:
+                  "https://github.com/RajManish8340/hexa-color-guessing",
+                tags: ["nextjs", "shadcn", "Ts"],
               },
               {
                 title: "Pokedex",
-                description: "Terminal based pokemon game where you can move around different areas and catch pokemon there ",
+                description:
+                  "Terminal based pokemon game where you can move around different areas and catch pokemon there ",
                 liveUrl: "",
                 sourceUrl: "https://github.com/RajManish8340/pokedex-ts",
-                tags: ["Ts", "Terminal", "caching"]
+                tags: ["Ts", "Terminal", "caching"],
               },
               {
                 title: "Web Crawler",
-                description: "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
+                description:
+                  "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
                 imageAlt: "Project Three preview",
                 sourceUrl: "https://github.com/RajManish8340/webCrawlerhttp",
                 liveUrl: "",
-                tags: ["Js", "Terminal" ,"Test"]
+                tags: ["Js", "Terminal", "Test"],
               },
-            ] as const
+              {
+                title: "Udta Parinda",
+                description: "flappy bird game ",
+                sourceUrl: "https://github.com/RajManish8340/Udta-Parinda",
+                liveUrl: "https://udta-parinda.vercel.app",
+                tags: [],
+              },
+            ] as const;
 
             return featuredProjects.map((p) => (
               <Card key={p.title}>

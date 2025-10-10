@@ -34,10 +34,16 @@ export default function ProjectsPage() {
               {
                 title: "Web Crawler",
                 description: "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
-                imageAlt: "Project Three preview",
                 sourceUrl: "https://github.com/RajManish8340/webCrawlerhttp",
                 liveUrl: "",
                 tags: ["Js", "Terminal" ,"Test"]
+              },
+              {
+                title: "Udta Parinda",
+                description: "flappy bird game ",
+                sourceUrl: "https://github.com/RajManish8340/Udta-Parinda",
+                liveUrl: "https://udta-parinda.vercel.app",
+                tags: []
               },
             ] as const
 
