@@ -115,7 +115,7 @@ export function MobileDock() {
           {/* External social links */}
           <li>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/RajManish8340"
               target="_blank"
               rel="noreferrer noopener"
               className="flex flex-col items-center gap-1 px-2 py-1 rounded-md text-muted-foreground hover:text-foreground transition-colors"
@@ -127,7 +127,7 @@ export function MobileDock() {
           </li>
           <li>
             <a
-              href="https://twitter.com/yourhandle"
+              href="https://x.com/RajMs_twt"
               target="_blank"
               rel="noreferrer noopener"
               className="flex flex-col items-center gap-1 px-2 py-1 rounded-md text-muted-foreground hover:text-foreground transition-colors"
