@@ -4,92 +4,99 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 export default function ProjectsPage() {
-   return (
-      <div className="mx-auto max-w-6xl px-4 py-10 space-y-6">
-         <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-semibold">Projects</h1>
-            <Button asChild variant="outline">
-               <Link href="/">Back home</Link>
-            </Button>
-         </div>
-         <section className="space-y-4">
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-               {(() => {
-                  const featuredProjects = [
-                     {
-                        title: "SPL Tokens Price",
-                        description: "Get price of any spl token from different decentralized exchanges",
-                        liveUrl: "https://ur-anus.vercel.app/",
-                        sourceUrl: "https://github.com/RajManish8340/ur-anus",
-                        tags: ["Web 3", "nextjs", "rust"]
-                     },
-                     {
-                        title: "Hex Colour Game",
-                        description: "Guess the hex code of the colour based on the given colour",
-                        liveUrl: "https://hexa-color-guessing-game.vercel.app",
-                        sourceUrl: "https://github.com/RajManish8340/hexa-color-guessing",
-                        tags: ["nextjs", "shadcn", "Ts"]
-                     },
-                     {
-                        title: "Pokedex",
-                        description: "Terminal based pokemon game where you can move around different areas and catch pokemon there ",
-                        liveUrl: "",
-                        sourceUrl: "https://github.com/RajManish8340/pokedex-ts",
-                        tags: ["Ts", "Terminal", "caching"]
-                     },
-                     {
-                        title: "Web Crawler",
-                        description: "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
-                        sourceUrl: "https://github.com/RajManish8340/webCrawlerhttp",
-                        liveUrl: "",
-                        tags: ["Js", "Terminal", "Test"]
-                     },
-                     {
-                        title: "Udta Parinda",
-                        description: "flappy bird game ",
-                        sourceUrl: "https://github.com/RajManish8340/Udta-Parinda",
-                        liveUrl: "https://udta-parinda.vercel.app",
-                        tags: []
-                     },
-                  ] as const
-
-                  return featuredProjects.map((p) => (
-                     <Card key={p.title}>
-                        <CardHeader>
-                           <CardTitle>{p.title}</CardTitle>
-                           <CardDescription>{p.description}</CardDescription>
-                        </CardHeader>
-                        <CardContent className="flex flex-wrap gap-2">
-                           {p.tags.map((t) => (
-                              <Badge variant="secondary" key={t}>
-                                 {t}
-                              </Badge>
-                           ))}
-                        </CardContent>
-                        <CardFooter className="flex items-center gap-2">
-                           {p.liveUrl ? (
-                              <Button asChild size="sm">
-                                 <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
-                                    Visit
-                                 </a>
-                              </Button>
-                           ) : null}
-                           {p.sourceUrl ? (
-                              <Button asChild size="sm" variant="outline">
-                                 <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
-                                    Source
-                                 </a>
-                              </Button>
-                           ) : null}
-                        </CardFooter>
-                     </Card>
-                  ))
-               })()}
-            </div>
-         </section>
-
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-10 space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-semibold">Projects</h1>
+        <Button asChild variant="outline">
+          <Link href="/">Back home</Link>
+        </Button>
       </div>
-   )
+      <section className="space-y-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {(() => {
+            const featuredProjects = [
+              {
+                title: "collaborative video room",
+                description: "Create a collaborative video room, add YouTube links, and let everyone vote on what to watch next. Perfect for watch parties, study groups, and team collaboration.",
+                liveUrl: "https://muzzzer.vercel.app/",
+                sourceUrl: "https://github.com/RajManish8340/muzer",
+                tags: ["websocket", "nextjs", "prisma", "express", "realtime", "Typescript", "Tailwind"]
+              },
+              {
+                title: "SPL Tokens Price",
+                description: "Get price of any spl token from different decentralized exchanges",
+                liveUrl: "https://ur-anus.vercel.app/",
+                sourceUrl: "https://github.com/RajManish8340/ur-anus",
+                tags: ["Web 3", "nextjs", "rust"]
+              },
+              {
+                title: "Hex Colour Game",
+                description: "Guess the hex code of the colour based on the given colour",
+                liveUrl: "https://hexa-color-guessing-game.vercel.app",
+                sourceUrl: "https://github.com/RajManish8340/hexa-color-guessing",
+                tags: ["nextjs", "shadcn", "Ts"]
+              },
+              {
+                title: "Pokedex",
+                description: "Terminal based pokemon game where you can move around different areas and catch pokemon there ",
+                liveUrl: "",
+                sourceUrl: "https://github.com/RajManish8340/pokedex-ts",
+                tags: ["Ts", "Terminal", "caching"]
+              },
+              {
+                title: "Web Crawler",
+                description: "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
+                sourceUrl: "https://github.com/RajManish8340/webCrawlerhttp",
+                liveUrl: "",
+                tags: ["Js", "Terminal", "Test"]
+              },
+              {
+                title: "Udta Parinda",
+                description: "flappy bird game ",
+                sourceUrl: "https://github.com/RajManish8340/Udta-Parinda",
+                liveUrl: "https://udta-parinda.vercel.app",
+                tags: []
+              },
+            ] as const
+
+            return featuredProjects.map((p) => (
+              <Card key={p.title}>
+                <CardHeader>
+                  <CardTitle>{p.title}</CardTitle>
+                  <CardDescription>{p.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <Badge variant="secondary" key={t}>
+                      {t}
+                    </Badge>
+                  ))}
+                </CardContent>
+                <CardFooter className="flex items-center gap-2">
+                  {p.liveUrl ? (
+                    <Button asChild size="sm">
+                      <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
+                        Visit
+                      </a>
+                    </Button>
+                  ) : null}
+                  {p.sourceUrl ? (
+                    <Button asChild size="sm" variant="outline">
+                      <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
+                        Source
+                      </a>
+                    </Button>
+                  ) : null}
+                </CardFooter>
+              </Card>
+            ))
+          })()}
+        </div>
+      </section>
+
+    </div>
+  )
 }
 
