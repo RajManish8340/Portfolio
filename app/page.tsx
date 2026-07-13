@@ -61,6 +61,13 @@ export default function HomePage() {
           {(() => {
             const featuredProjects = [
               {
+                title: "HTTP Server in Rust",
+                description: "HTTP server from scratch using TCP primitives. Server is capable of handling simple GET/POST requests, serving files and handling multiple concurrent connections.",
+                liveUrl: "",
+                sourceUrl: "https://github.com/RajManish8340/http-server-rust-2",
+                tags: ["rust", "TCP", "HTTP"]
+              },
+              {
                 title: "collaborative video room",
                 description: "Create a collaborative video room, add YouTube links, and let everyone vote on what to watch next. Perfect for watch parties, study groups, and team collaboration.",
                 liveUrl: "https://muzzzer.vercel.app/",
