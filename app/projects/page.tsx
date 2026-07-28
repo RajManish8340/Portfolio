@@ -32,6 +32,13 @@ export default function ProjectsPage() {
                 tags: ["websocket", "nextjs", "prisma", "express", "realtime", "Typescript", "Tailwind"]
               },
               {
+                title: "UI Components ",
+                description: "modern UI components with tailwind and motion",
+                liveUrl: "https://saundaryaui.vercel.app/components",
+                sourceUrl: "https://github.com/RajManish8340/UI-Components",
+                tags: ["UI", "Tailwind", "motion"]
+              },
+              {
                 title: "SPL Tokens Price",
                 description: "Get price of any spl token from different decentralized exchanges",
                 liveUrl: "https://ur-anus.vercel.app/",
