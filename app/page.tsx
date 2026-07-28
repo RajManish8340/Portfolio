@@ -77,7 +77,7 @@ export default function HomePage() {
               {
                 title: "UI Components ",
                 description: "modern UI components with tailwind and motion",
-                liveUrl: "https://saundaryaui.vercel.app/components",
+                liveUrl: "https://saundaryaui.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/UI-Components",
                 tags: ["UI", "Tailwind", "motion"]
               },
