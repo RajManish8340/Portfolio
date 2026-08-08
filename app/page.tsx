@@ -1,20 +1,30 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 space-y-12">
       {/* Hero */}
       <section className="flex flex-col items-start gap-6">
-        <span className="text-xs uppercase tracking-widest text-muted-foreground">Portfolio</span>
+        <span className="text-xs uppercase tracking-widest text-muted-foreground">
+          Portfolio
+        </span>
         <h1 className="text-4xl md:text-5xl font-semibold text-balance">
-          Building delightful software  with care and craft.
+          Building delightful software with care and craft.
         </h1>
         <p className="text-muted-foreground max-w-2xl">
-          I'm a software engineer focused on better software , performance, accessibility, and clean modern design . Continuosly learning new things. Explore my latest
-          projects and writings below .
+          I'm a software engineer focused on better software , performance,
+          accessibility, and clean modern design . Continuosly learning new
+          things. Explore my latest projects and writings below .
         </p>
         <div className="flex items-center gap-3">
           <Button asChild>
@@ -34,17 +44,21 @@ export default function HomePage() {
             <CardDescription>Fast and responsive</CardDescription>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            optimizing from the first day itself providing a delightful software experience
+            optimizing from the first day itself providing a delightful software
+            experience
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
             <CardTitle>Modern tooling</CardTitle>
-            <CardDescription>Next.js, TypeScript, and shadcn/ui</CardDescription>
+            <CardDescription>
+              Next.js, TypeScript, and shadcn/ui
+            </CardDescription>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            A pragmatic, maintainable stack, with strong patterns for scalability and velocity.
+            A pragmatic, maintainable stack, with strong patterns for
+            scalability and velocity.
           </CardContent>
         </Card>
       </section>
@@ -62,31 +76,51 @@ export default function HomePage() {
             const featuredProjects = [
               {
                 title: "HTTP Server in Rust",
-                description: "HTTP server from scratch using TCP primitives. Server is capable of handling simple GET/POST requests, serving files and handling multiple concurrent connections.",
+                description:
+                  "HTTP server from scratch using TCP primitives. Server is capable of handling simple GET/POST requests, serving files and handling multiple concurrent connections.",
                 liveUrl: "",
-                sourceUrl: "https://github.com/RajManish8340/http-server-rust-2",
-                tags: ["rust", "TCP", "HTTP"]
+                sourceUrl:
+                  "https://github.com/RajManish8340/http-server-rust-2",
+                tags: ["rust", "TCP", "HTTP"],
               },
               {
                 title: "collaborative video room",
-                description: "Create a collaborative video room, add YouTube links, and let everyone vote on what to watch next. Perfect for watch parties, study groups, and team collaboration.",
+                description:
+                  "Create a collaborative video room, add YouTube links, and let everyone vote on what to watch next. Perfect for watch parties, study groups, and team collaboration.",
                 liveUrl: "https://muzzzer.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/muzer",
-                tags: ["websocket", "nextjs", "prisma", "express", "realtime", "TypeScript", "Tailwind"]
+                tags: [
+                  "websocket",
+                  "nextjs",
+                  "prisma",
+                  "express",
+                  "realtime",
+                  "TypeScript",
+                  "Tailwind",
+                ],
               },
               {
                 title: "UI Components ",
                 description: "modern UI components with tailwind and motion",
                 liveUrl: "https://saundaryaui.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/UI-Components",
-                tags: ["UI", "Tailwind", "motion"]
+                tags: ["UI", "Tailwind", "motion"],
+              },
+              {
+                title: "shakespeare gpt",
+                description:
+                  "Generatively Pretrained Transformer (GPT), following the paper 'Attention is All You Need' and OpenAI's GPT-2 / GPT-3.",
+                liveUrl: "",
+                sourceUrl: "https://github.com/RajManish8340/gpt-shakespeare",
+                tags: ["pytorch", "gpt", "transformers"],
               },
               {
                 title: "SPL Tokens Price",
-                description: "Get price of any spl token from different decentralized exchanges",
+                description:
+                  "Get price of any spl token from different decentralized exchanges",
                 liveUrl: "https://ur-anus.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/ur-anus",
-                tags: ["Web 3", "nextjs", "rust"]
+                tags: ["Web 3", "nextjs", "rust"],
               },
               {
                 title: "Hex Colour Game",
@@ -139,21 +173,29 @@ export default function HomePage() {
                 <CardFooter className="flex items-center gap-2">
                   {p.liveUrl ? (
                     <Button asChild size="sm">
-                      <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={p.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Visit
                       </a>
                     </Button>
                   ) : null}
                   {p.sourceUrl ? (
                     <Button asChild size="sm" variant="outline">
-                      <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={p.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Source
                       </a>
                     </Button>
                   ) : null}
                 </CardFooter>
               </Card>
-            ))
+            ));
           })()}
         </div>
       </section>
@@ -195,6 +237,5 @@ export default function HomePage() {
         </div>
       </section> */}
     </div>
-  )
+  );
 }
-

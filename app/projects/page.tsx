@@ -1,7 +1,14 @@
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function ProjectsPage() {
   return (
@@ -13,67 +20,90 @@ export default function ProjectsPage() {
         </Button>
       </div>
       <section className="space-y-4">
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {(() => {
             const featuredProjects = [
               {
                 title: "HTTP Server in Rust",
-                description: "HTTP server from scratch using TCP primitives. Server is capable of handling simple GET/POST requests, serving files and handling multiple concurrent connections.",
+                description:
+                  "HTTP server from scratch using TCP primitives. Server is capable of handling simple GET/POST requests, serving files and handling multiple concurrent connections.",
                 liveUrl: "",
-                sourceUrl: "https://github.com/RajManish8340/http-server-rust-2",
-                tags: ["rust", "TCP", "HTTP"]
+                sourceUrl:
+                  "https://github.com/RajManish8340/http-server-rust-2",
+                tags: ["rust", "TCP", "HTTP"],
               },
               {
                 title: "collaborative video room",
-                description: "Create a collaborative video room, add YouTube links, and let everyone vote on what to watch next. Perfect for watch parties, study groups, and team collaboration.",
+                description:
+                  "Create a collaborative video room, add YouTube links, and let everyone vote on what to watch next. Perfect for watch parties, study groups, and team collaboration.",
                 liveUrl: "https://muzzzer.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/muzer",
-                tags: ["websocket", "nextjs", "prisma", "express", "realtime", "Typescript", "Tailwind"]
+                tags: [
+                  "websocket",
+                  "nextjs",
+                  "prisma",
+                  "express",
+                  "realtime",
+                  "Typescript",
+                  "Tailwind",
+                ],
               },
               {
                 title: "UI Components ",
                 description: "modern UI components with tailwind and motion",
                 liveUrl: "https://saundaryaui.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/UI-Components",
-                tags: ["UI", "Tailwind", "motion"]
+                tags: ["UI", "Tailwind", "motion"],
+              },
+              {
+                title: "shakespeare gpt",
+                description:
+                  "Generatively Pretrained Transformer (GPT), following the paper 'Attention is All You Need' and OpenAI's GPT-2 / GPT-3.",
+                liveUrl: "",
+                sourceUrl: "https://github.com/RajManish8340/gpt-shakespeare",
+                tags: ["pytorch", "gpt", "transformers"],
               },
               {
                 title: "SPL Tokens Price",
-                description: "Get price of any spl token from different decentralized exchanges",
+                description:
+                  "Get price of any spl token from different decentralized exchanges",
                 liveUrl: "https://ur-anus.vercel.app/",
                 sourceUrl: "https://github.com/RajManish8340/ur-anus",
-                tags: ["Web 3", "nextjs", "rust"]
+                tags: ["Web 3", "nextjs", "rust"],
               },
               {
                 title: "Hex Colour Game",
-                description: "Guess the hex code of the colour based on the given colour",
+                description:
+                  "Guess the hex code of the colour based on the given colour",
                 liveUrl: "https://hexa-color-guessing-game.vercel.app",
-                sourceUrl: "https://github.com/RajManish8340/hexa-color-guessing",
-                tags: ["nextjs", "shadcn", "Ts"]
+                sourceUrl:
+                  "https://github.com/RajManish8340/hexa-color-guessing",
+                tags: ["nextjs", "shadcn", "Ts"],
               },
               {
                 title: "Pokedex",
-                description: "Terminal based pokemon game where you can move around different areas and catch pokemon there ",
+                description:
+                  "Terminal based pokemon game where you can move around different areas and catch pokemon there ",
                 liveUrl: "",
                 sourceUrl: "https://github.com/RajManish8340/pokedex-ts",
-                tags: ["Ts", "Terminal", "caching"]
+                tags: ["Ts", "Terminal", "caching"],
               },
               {
                 title: "Web Crawler",
-                description: "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
+                description:
+                  "Terminal based web crawler where you can type in the url of the site get the links related to that page ",
                 sourceUrl: "https://github.com/RajManish8340/webCrawlerhttp",
                 liveUrl: "",
-                tags: ["Js", "Terminal", "Test"]
+                tags: ["Js", "Terminal", "Test"],
               },
               {
                 title: "Udta Parinda",
                 description: "flappy bird game ",
                 sourceUrl: "https://github.com/RajManish8340/Udta-Parinda",
                 liveUrl: "https://udta-parinda.vercel.app",
-                tags: []
+                tags: [],
               },
-            ] as const
+            ] as const;
 
             return featuredProjects.map((p) => (
               <Card key={p.title}>
@@ -91,26 +121,32 @@ export default function ProjectsPage() {
                 <CardFooter className="flex items-center gap-2">
                   {p.liveUrl ? (
                     <Button asChild size="sm">
-                      <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={p.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Visit
                       </a>
                     </Button>
                   ) : null}
                   {p.sourceUrl ? (
                     <Button asChild size="sm" variant="outline">
-                      <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={p.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Source
                       </a>
                     </Button>
                   ) : null}
                 </CardFooter>
               </Card>
-            ))
+            ));
           })()}
         </div>
       </section>
-
     </div>
-  )
+  );
 }
-
