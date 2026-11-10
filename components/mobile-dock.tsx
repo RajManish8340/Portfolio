@@ -67,7 +67,12 @@ const items = [
   { href: "/blogs", label: "Blogs", icon: BlogIcon },
   { href: "/projects", label: "Projects", icon: ProjectsIcon },
   { href: "/about", label: "About", icon: AboutIcon },
-  { href: "/resume", label: "Resume", icon: ResumeIcon },
+  {
+    href: "https://drive.google.com/file/d/1SDJeHwAt--t6WCq7DR5IATM645GEIijv/view?usp=drive_link",
+    label: "Resume",
+    icon: ResumeIcon,
+    external: true,
+  },
 ]
 
 export function MobileDock() {
@@ -95,20 +100,35 @@ export function MobileDock() {
       >
         {/* Internal page links */}
         <ul className="flex flex-1 items-center justify-between">
-          {items.map(({ href, label, icon: Icon }) => {
-            const active = pathname === href
+          {items.map(({ href, label, icon: Icon, external }) => {
+            const active = !external && pathname === href
             return (
               <li key={href}>
-                <Link
-                  href={href}
-                  className={cn(
-                    "flex flex-col items-center gap-1 px-2 py-1 rounded-md transition-colors",
-                    active ? "text-primary" : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  <Icon />
-                  <span className="text-[11px] leading-none">{label}</span>
-                </Link>
+                {external ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "flex flex-col items-center gap-1 px-2 py-1 rounded-md transition-colors",
+                      "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    <Icon />
+                    <span className="text-[11px] leading-none">{label}</span>
+                  </a>
+                ) : (
+                  <Link
+                    href={href}
+                    className={cn(
+                      "flex flex-col items-center gap-1 px-2 py-1 rounded-md transition-colors",
+                      active ? "text-primary" : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    <Icon />
+                    <span className="text-[11px] leading-none">{label}</span>
+                  </Link>
+                )}
               </li>
             )
           })}

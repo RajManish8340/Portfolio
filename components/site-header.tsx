@@ -10,7 +10,7 @@ const navItems = [
   { href: "/blogs", label: "Blogs" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
-  { href: "/resume", label: "Resume" },
+  { href: "https://drive.google.com/file/d/1SDJeHwAt--t6WCq7DR5IATM645GEIijv/view?usp=drive_link", label: "Resume", external: true },
 ]
 
 export function SiteHeader() {
@@ -31,15 +31,27 @@ export function SiteHeader() {
           className={cn("hidden md:flex items-center gap-6", showMainNav ? "md:flex" : "md:hidden")}
           aria-label="Primary"
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.external ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-2">
